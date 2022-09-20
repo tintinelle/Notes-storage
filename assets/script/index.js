@@ -6,6 +6,7 @@ let notes = [];
 let newNoteText = document.getElementById('noteTextarea').value;
 
 const allNotes = document.getElementById('allNotes');
+const error = document.getElementById('error');
 
 // отображаем заметки при прогрузке страницы
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -22,7 +23,7 @@ const generateNotes = () => {
         notes = JSON.parse(localStorage.getItem('notes'));
 
         for (let note of notes) {
-            optionsNote += `<div>${note}</div>`;
+            optionsNote += `<div class="note">${note}</div>`;
         }
 
         allNotes.innerHTML = optionsNote;
@@ -30,12 +31,24 @@ const generateNotes = () => {
 };
 
 const addNote = () => {
+    let errors = [];
     newNoteText = document.getElementById('noteTextarea').value;
 
     console.log(newNoteText);
+    console.dir(document.getElementById('noteTextarea'));
 
+    let validity = document.getElementById('noteTextarea').validity;
+
+    if (validity.valueMissing) {
+        errors.push('Заметка пустая!');
+        error.innerHTML = `${errors}<br/>`;
+    }
     // добавляем текст заметки в массив заметок
-    notes.push(newNoteText);
+    else {  
+        error.innerHTML = ``;  
+        notes.push(newNoteText);
+    }
+
     console.log(notes);
 
     // делаем из массива строку и добавляем в локальное хранилище:

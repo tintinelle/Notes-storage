@@ -1,0 +1,52 @@
+.main__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 45rem;
+    margin: 40px;
+    padding: 40px;
+
+    border: 1px solid #FF5964;
+
+    background-color: #FCFDC4;
+}
+
+.main__noteslist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main__panel {
+    text-align: center;
+    padding: 20px;
+    
+    border: 1px solid #FF5964;
+    background-color: #F8FB9D;
+}
+
+.main__error {
+    width: 20%;
+    margin: 20px auto;
+
+    font-weight: bolder;
+    font-size: 1.2em;
+
+    color: darkred;
+}
+
+.button {
+    width: 40%;
+    margin-top: 20px;
+    background-color: #FF5964;
+}
+
+.note {
+    width: 30%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: #FFD6D8;
+}

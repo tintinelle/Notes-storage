@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -16,14 +16,11 @@
     <main class="main">
         <div class="main__container">
             <div class="main__noteslist" id="allNotes"></div>
-
-            <!-- <div class="col-12">
-                    <input type="text" class="form-control" id="avatar" placeholder="Add your avatar link">
-                </div> -->
-
-            <div class="col-12">
-                <textarea class="form-control" id="noteTextarea" rows="3" placeholder="Текст заметки"></textarea>
-                <button class="btn btn-success col-6 button" type="button" id="btnNewNote">Новая заметка</button>
+            <div class="col-12 main__panel">
+                <textarea required class="form-control main__textarea" id="noteTextarea" rows="3"
+                    placeholder="Текст заметки"></textarea>
+                <div class="main__error" id="error"></div>
+                <button class="btn col-6 button" type="button" id="btnNewNote">Новая заметка</button>
             </div>
         </div>
     </main>

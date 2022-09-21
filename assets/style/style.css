@@ -18,6 +18,11 @@
     justify-content: space-around;
 }
 
+.note__wrap {
+    width: 30%;
+    display: flex;
+}
+
 .main__panel {
     text-align: center;
     padding: 20px;
@@ -40,13 +45,26 @@
     width: 40%;
     margin-top: 20px;
     background-color: #FF5964;
+    color: white;
 }
 
 .note {
-    width: 30%;
+    /* width: 30%; */
+    width: 80%;
     margin: 5px;
     padding: 10px;
     border-radius: 20px;
 
     background-color: #FFD6D8;
+}
+
+.button__delete {
+    width: 43px;
+    height: 43px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 20px;
+
+    background-color: #FF5964;
+    color: white;
 }
